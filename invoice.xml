@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- 
+        Agregar nota de debito al menu y generar tree (de acuerdo a los estados)     
+        -->
+        <record model="ir.action.act_window" id="act_invoice_delivery_note_form">
+            <field name="name">Nota de Entrega</field>
+            <field name="res_model">account.invoice</field>
+            <field name="domain">[('type', '=', 'delivery_note')]</field>
+            <field name="context">{'type': 'delivery_note'}</field>
+            <field name="search_value"></field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_invoice_delivery_note_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="account_invoice.invoice_view_tree"/>
+            <field name="act_window" ref="act_invoice_delivery_note_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_invoice_delivery_note_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="account_invoice.invoice_view_form"/>
+            <field name="act_window" ref="act_invoice_delivery_note_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_invoice_delivery_note_domain_draft">
+            <field name="name">Draft</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain">[('state', '=', 'draft')]</field>
+            <field name="act_window" ref="act_invoice_delivery_note_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_invoice_delivery_note_domain_validated">
+            <field name="name">Validated</field>
+            <field name="sequence" eval="20"/>
+            <field name="domain">[('state', '=', 'validated')]</field>
+            <field name="act_window" ref="act_invoice_delivery_note_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_invoice_delivery_note_domain_posted">
+            <field name="name">Posted</field>
+            <field name="sequence" eval="30"/>
+            <field name="domain">[('state', '=', 'posted')]</field>
+            <field name="act_window" ref="act_invoice_delivery_note_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_invoice_delivery_note_domain_all">
+            <field name="name">All</field>
+            <field name="sequence" eval="9999"/>
+            <field name="domain"></field>
+            <field name="act_window" ref="act_invoice_delivery_note_form"/>
+        </record>
+        <menuitem parent="account_invoice.menu_invoices" action="act_invoice_delivery_note_form"
+            id="menu_invoice_delivery_note_form" sequence="2"/>
+            
+        <record model="ir.ui.view" id="out_invoice_start_view_form">
+            <field name="model">nodux_account_delivery_note.out_invoice.start</field>
+            <field name="type">form</field>
+            <field name="name">invoice_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="invoice">
+            <field name="name">Generar Factura</field>
+            <field name="wiz_name">nodux_account_delivery_note.out_invoice</field>
+            <field name="model">account.invoice</field>
+        </record>
+        
+        <record model="ir.action.keyword" id="debit_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">account.invoice,-1</field>
+            <field name="action" ref="invoice"/>
+        </record>
+        
+    </data>
+</tryton>
+
