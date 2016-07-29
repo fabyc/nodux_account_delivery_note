@@ -1,0 +1,95 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:account.fiscalyear,delivery_note_sequence:"
+msgid "Delivery Note Sequence"
+msgstr "Secuencia de nota de entrega"
+
+msgctxt "field:account.period,delivery_note_sequence:"
+msgid "Delivery Note Sequence"
+msgstr "Secuencia de nota de entrega"
+
+msgctxt "field:nodux_account_delivery_note.out_invoice.start,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "model:ir.action,name:act_invoice_delivery_note_form"
+msgid "Nota de Entrega"
+msgstr "Nota de entrega"
+
+msgctxt "model:ir.action,name:invoice"
+msgid "Generar Factura"
+msgstr "Generar factura"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_invoice_delivery_note_domain_all"
+msgid "All"
+msgstr "Todo"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_invoice_delivery_note_domain_draft"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_invoice_delivery_note_domain_posted"
+msgid "Posted"
+msgstr "Contabilizado"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_invoice_delivery_note_domain_validated"
+msgid "Validated"
+msgstr "Validado"
+
+msgctxt "model:ir.ui.menu,name:menu_invoice_delivery_note_form"
+msgid "Nota de Entrega"
+msgstr "Nota de entrega"
+
+msgctxt "model:nodux_account_delivery_note.out_invoice.start,name:"
+msgid "Invoice Start"
+msgstr "Iniciar factura"
+
+msgctxt "selection:account.invoice,type:"
+msgid "Nota de Entrega"
+msgstr "Nota de entrega"
+
+msgctxt "view:account.invoice:"
+msgid "Also known as Pro Forma"
+msgstr "También conocido como proforma"
+
+msgctxt "view:account.invoice:"
+msgid "Are you sure to cancel the invoice?"
+msgstr "¿Está seguro que desea cancelar la factura?"
+
+msgctxt "view:account.invoice:"
+msgid "Comprobante de Retencion Cliente"
+msgstr "Comprobante de retención de cliente"
+
+msgctxt "view:account.invoice:"
+msgid "Validate"
+msgstr "Validar"
+
+msgctxt "view:account.invoice:"
+msgid "_Cancel"
+msgstr "_Cancelar"
+
+msgctxt "view:account.invoice:"
+msgid "_Draft"
+msgstr "_Borrador"
+
+msgctxt "view:nodux_account_delivery_note.out_invoice.start:"
+msgid "Esta seguro de generar la factura de esta nota de entrega"
+msgstr "¿Está seguro de generar la factura de esta nota de entrega?"
+
+msgctxt "view:nodux_account_delivery_note.out_invoice.start:"
+msgid "Generar Factura"
+msgstr "Generar Factura"
+
+msgctxt "wizard_button:nodux_account_delivery_note.out_invoice,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:nodux_account_delivery_note.out_invoice,start,invoice:"
+msgid "Invoice"
+msgstr "Factura"
